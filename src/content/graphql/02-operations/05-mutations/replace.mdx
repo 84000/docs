@@ -1,0 +1,41 @@
+---
+id: replace
+title: replace
+---
+
+Replace text within one or more targets.
+Requires editor.edit permission.
+
+```graphql
+replace(
+  searchText: String!
+  replaceText: String!
+  targetUuids: [ID!]!
+  type: ReplaceType = PASSAGE
+  occurrenceIndex: Int
+  cursorPassageUuid: ID
+  cursorStart: Int
+): ReplaceResult!
+```
+
+### Arguments
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">replace</code>.<code className="gqlmd-entity-name">searchText</code></span>](#search-text)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#search-text\}
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">replace</code>.<code className="gqlmd-entity-name">replaceText</code></span>](#replace-text)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#replace-text\}
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">replace</code>.<code className="gqlmd-entity-name">targetUuids</code></span>](#target-uuids)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[ID!]!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#target-uuids\}
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">replace</code>.<code className="gqlmd-entity-name">type</code></span>](#type)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ReplaceType</code></span>](/graphql/03-types/02-enums/replace-type) <mark className="gqlmd-badge">enum</mark> \{#type\}
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">replace</code>.<code className="gqlmd-entity-name">occurrenceIndex</code></span>](#occurrence-index)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge">scalar</mark> \{#occurrence-index\}
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">replace</code>.<code className="gqlmd-entity-name">cursorPassageUuid</code></span>](#cursor-passage-uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge">scalar</mark> \{#cursor-passage-uuid\}
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">replace</code>.<code className="gqlmd-entity-name">cursorStart</code></span>](#cursor-start)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge">scalar</mark> \{#cursor-start\}
+
+### Type
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-name">ReplaceResult</code></span>](/graphql/03-types/06-objects/replace-result) <mark className="gqlmd-badge">object</mark>
+
+Result of a replace mutation

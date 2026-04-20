@@ -1,0 +1,33 @@
+---
+id: title
+title: Title
+---
+
+A title of a work in a specific language
+
+```graphql
+type Title {
+  uuid: ID!
+  content: String!
+  language: String!
+  type: String!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Title</code>.<code className="gqlmd-entity-name">uuid</code></span>](#uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#uuid\}
+
+Unique identifier for the title
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Title</code>.<code className="gqlmd-entity-name">content</code></span>](#content)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#content\}
+
+The title text content
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Title</code>.<code className="gqlmd-entity-name">language</code></span>](#language)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#language\}
+
+Language code (e.g., "en", "bo", "Sa-Ltn", "Bo-Ltn")
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Title</code>.<code className="gqlmd-entity-name">type</code></span>](#type)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#type\}
+
+Type of title (e.g., "mainTitle", "longTitle", "otherTitle", "toh", "shortcode")

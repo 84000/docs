@@ -1,0 +1,30 @@
+{
+  "schema": "https://graphql.84000.co/api/graphql",
+  "extensions": {
+    "graphql-markdown": {
+      "schema": "https://graphql.84000.co/api/graphql",
+      "rootPath": "src/content",
+      "baseURL": "graphql",
+      "linkRoot": "/",
+      "homepage": "scripts/graphql-docs/homepage.mdx",
+      "loaders": {
+        "UrlLoader": {
+          "module": "@graphql-tools/url-loader",
+          "options": {
+            "method": "POST"
+          }
+        }
+      },
+      "docOptions": {
+        "index": true,
+        "categorySort": "natural",
+        "frontMatter": {}
+      },
+      "printTypeOptions": {
+        "deprecated": "group",
+        "hierarchy": "api"
+      },
+      "pretty": true
+    }
+  }
+}

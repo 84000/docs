@@ -1,0 +1,26 @@
+---
+id: save-passages
+title: savePassages
+---
+
+Save one or more passages.
+Requires editor.edit permission.
+
+```graphql
+savePassages(
+  passages: [PassageInput!]!
+  deletedUuids: [ID!]
+): SavePassagesResult!
+```
+
+### Arguments
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">savePassages</code>.<code className="gqlmd-entity-name">passages</code></span>](#passages)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[PassageInput!]!</code></span>](/graphql/03-types/03-inputs/passage-input) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">input</mark> \{#passages\}
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">savePassages</code>.<code className="gqlmd-entity-name">deletedUuids</code></span>](#deleted-uuids)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[ID!]</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge">list</mark> <mark className="gqlmd-badge">scalar</mark> \{#deleted-uuids\}
+
+### Type
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-name">SavePassagesResult</code></span>](/graphql/03-types/06-objects/save-passages-result) <mark className="gqlmd-badge">object</mark>
+
+Result of saving passages

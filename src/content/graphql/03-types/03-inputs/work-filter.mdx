@@ -1,0 +1,18 @@
+---
+id: work-filter
+title: WorkFilter
+---
+
+Filter criteria for works query
+
+```graphql
+input WorkFilter {
+  maxPages: Int
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">WorkFilter</code>.<code className="gqlmd-entity-name">maxPages</code></span>](#max-pages)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge">scalar</mark> \{#max-pages\}
+
+Maximum number of source pages (exclusive). Only return works with fewer pages than this value.

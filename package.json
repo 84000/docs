@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "docs:graphql": "node scripts/graphql-docs/generate.mjs",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,11 +17,15 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@graphql-markdown/cli": "^0.7.1",
+    "@graphql-tools/url-loader": "^9.1.1",
     "@tailwindcss/postcss": "^4.0.12",
     "@types/node": "22.13.8",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
+    "graphql": "^16.13.2",
     "postcss": "8.5.3",
+    "prettier": "^3.8.1",
     "tailwindcss": "^4.1.11",
     "typescript": "5.9.2"
   }

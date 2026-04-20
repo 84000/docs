@@ -1,0 +1,28 @@
+---
+id: glossary-term-connection
+title: GlossaryTermConnection
+---
+
+Paginated connection of glossary term instances for a work
+
+```graphql
+type GlossaryTermConnection {
+  nodes: [GlossaryTermInstance!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermConnection</code>.<code className="gqlmd-entity-name">nodes</code></span>](#nodes)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[GlossaryTermInstance!]!</code></span>](/graphql/03-types/06-objects/glossary-term-instance) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#nodes\}
+
+List of glossary term instances in this page
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermConnection</code>.<code className="gqlmd-entity-name">pageInfo</code></span>](#page-info)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">PageInfo!</code></span>](/graphql/03-types/06-objects/page-info) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#page-info\}
+
+Pagination information
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermConnection</code>.<code className="gqlmd-entity-name">totalCount</code></span>](#total-count)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#total-count\}
+
+Total number of glossary terms in this work

@@ -1,0 +1,16 @@
+---
+id: skip
+title: skip
+---
+
+Directs the executor to skip this field or fragment when the `if` argument is true.
+
+```graphql
+directive @skip(if: Boolean!) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+```
+
+### Arguments
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">skip</code>.<code className="gqlmd-entity-name">if</code></span>](#if)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean!</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#if\}
+
+Skipped when true.

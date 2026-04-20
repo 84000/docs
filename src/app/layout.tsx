@@ -1,20 +1,21 @@
-import { Footer, Layout, Navbar } from 'nextra-theme-docs';
-import { Head } from 'nextra/components';
-import { getPageMap } from 'nextra/page-map';
-import 'nextra-theme-docs/style.css';
+import { Footer, Layout, Navbar } from "nextra-theme-docs";
+import { Head } from "nextra/components";
+import { getPageMap } from "nextra/page-map";
+import "nextra-theme-docs/style.css";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: '84000 Documentation',
+export const metadata: Metadata = {
+  title: "84000 Documentation",
   description:
     "Technical and digital publication documentation hub for 84000's tools.",
 };
 
-const navbar = (
-  <Navbar
-    logo={<b>84000 Documentation</b>}
-  />
+const navbar = <Navbar logo={<b>84000 Documentation</b>} />;
+const footer = (
+  <Footer>
+    © {new Date().getFullYear()} 84000: Translating the Words of the Buddha
+  </Footer>
 );
-const footer = <Footer>© {new Date().getFullYear()} 84000: Translating the Words of the Buddha</Footer>;
 
 export default async function RootLayout({
   children,

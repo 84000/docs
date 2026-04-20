@@ -1,0 +1,75 @@
+---
+id: passage
+title: Passage
+---
+
+A passage of text from a work
+
+```graphql
+type Passage {
+  uuid: ID!
+  workUuid: ID!
+  content: String!
+  label: String
+  sort: Int!
+  type: String!
+  toh: String
+  xmlId: String
+  annotations: [Annotation!]!
+  alignments: [Alignment!]!
+  json: JSON
+  references: [Passage!]!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">uuid</code></span>](#uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#uuid\}
+
+Unique identifier for the passage
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">workUuid</code></span>](#work-uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#work-uuid\}
+
+UUID of the work this passage belongs to
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">content</code></span>](#content)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#content\}
+
+Text content of the passage
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">label</code></span>](#label)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#label\}
+
+Display label for the passage (e.g., "1.1")
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">sort</code></span>](#sort)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#sort\}
+
+Sort order within the work
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">type</code></span>](#type)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#type\}
+
+Type of passage content (e.g., translation, introduction, colophon)
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">toh</code></span>](#toh)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#toh\}
+
+Tohoku number associated with this passage, if applicable
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">xmlId</code></span>](#xml-id)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#xml-id\}
+
+The Legacy XML ID from the source document
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">annotations</code></span>](#annotations)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[Annotation!]!</code></span>](/graphql/03-types/06-objects/annotation) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#annotations\}
+
+Annotations marking up ranges within this passage
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">alignments</code></span>](#alignments)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[Alignment!]!</code></span>](/graphql/03-types/06-objects/alignment) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#alignments\}
+
+Alignments linking this passage to Tibetan source text
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">json</code></span>](#json)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">JSON</code></span>](/graphql/03-types/08-scalars/json) <mark className="gqlmd-badge">scalar</mark> \{#json\}
+
+TipTap editor JSON representation of this passage.
+Transforms content and annotations into nested JSON structure.
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Passage</code>.<code className="gqlmd-entity-name">references</code></span>](#references)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[Passage!]!</code></span>](/graphql/03-types/06-objects/passage) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#references\}
+
+Passages that reference this endnote passage via end-note-link annotations.
+Only populated for endnotes type passages; empty for all other types.

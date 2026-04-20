@@ -1,0 +1,65 @@
+---
+id: passage-connection
+title: PassageConnection
+---
+
+Paginated connection of passages
+
+```graphql
+type PassageConnection {
+  nodes: [Passage!]!
+  pageInfo: PageInfo!
+  nextCursor: String @deprecated
+  prevCursor: String @deprecated
+  hasMoreAfter: Boolean! @deprecated
+  hasMoreBefore: Boolean! @deprecated
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageConnection</code>.<code className="gqlmd-entity-name">nodes</code></span>](#nodes)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[Passage!]!</code></span>](/graphql/03-types/06-objects/passage) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#nodes\}
+
+List of passages
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageConnection</code>.<code className="gqlmd-entity-name">pageInfo</code></span>](#page-info)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">PageInfo!</code></span>](/graphql/03-types/06-objects/page-info) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#page-info\}
+
+Pagination information
+
+<details className="gqlmd-details">
+<summary className="gqlmd-details-summary">deprecated</summary>
+
+</details>
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageConnection</code>.<code className="gqlmd-entity-name">nextCursor</code></span>](#next-cursor)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-deprecated">deprecated</mark> <mark className="gqlmd-badge">scalar</mark> \{#next-cursor\}
+
+> **DEPRECATED**
+
+Use pageInfo.nextCursor instead
+
+Cursor for fetching the next page
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageConnection</code>.<code className="gqlmd-entity-name">prevCursor</code></span>](#prev-cursor)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-deprecated">deprecated</mark> <mark className="gqlmd-badge">scalar</mark> \{#prev-cursor\}
+
+> **DEPRECATED**
+
+Use pageInfo.prevCursor instead
+
+Cursor for fetching the previous page
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageConnection</code>.<code className="gqlmd-entity-name">hasMoreAfter</code></span>](#has-more-after)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean!</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge gqlmd-badge-deprecated">deprecated</mark> <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#has-more-after\}
+
+> **DEPRECATED**
+
+Use pageInfo.hasMoreAfter instead
+
+Whether there are more passages after the current page
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageConnection</code>.<code className="gqlmd-entity-name">hasMoreBefore</code></span>](#has-more-before)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean!</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge gqlmd-badge-deprecated">deprecated</mark> <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#has-more-before\}
+
+> **DEPRECATED**
+
+Use pageInfo.hasMoreBefore instead
+
+Whether there are more passages before the current page
+undefined

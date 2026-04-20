@@ -1,0 +1,23 @@
+---
+id: health-status
+title: HealthStatus
+---
+
+Health status response
+
+```graphql
+type HealthStatus {
+  status: String!
+  timestamp: String!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">HealthStatus</code>.<code className="gqlmd-entity-name">status</code></span>](#status)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#status\}
+
+Current status of the API (e.g., "ok", "degraded")
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">HealthStatus</code>.<code className="gqlmd-entity-name">timestamp</code></span>](#timestamp)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#timestamp\}
+
+ISO 8601 timestamp of the health check

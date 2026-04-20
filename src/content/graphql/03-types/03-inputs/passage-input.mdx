@@ -1,0 +1,53 @@
+---
+id: passage-input
+title: PassageInput
+---
+
+Input type for saving a passage
+
+```graphql
+input PassageInput {
+  uuid: ID!
+  workUuid: ID!
+  content: String!
+  label: String!
+  sort: Int!
+  type: String!
+  xmlId: String
+  annotations: JSON!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageInput</code>.<code className="gqlmd-entity-name">uuid</code></span>](#uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#uuid\}
+
+Unique identifier for the passage
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageInput</code>.<code className="gqlmd-entity-name">workUuid</code></span>](#work-uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#work-uuid\}
+
+UUID of the work this passage belongs to
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageInput</code>.<code className="gqlmd-entity-name">content</code></span>](#content)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#content\}
+
+Text content of the passage
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageInput</code>.<code className="gqlmd-entity-name">label</code></span>](#label)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#label\}
+
+Display label for the passage
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageInput</code>.<code className="gqlmd-entity-name">sort</code></span>](#sort)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#sort\}
+
+Sort order within the work
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageInput</code>.<code className="gqlmd-entity-name">type</code></span>](#type)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#type\}
+
+Type of passage content
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageInput</code>.<code className="gqlmd-entity-name">xmlId</code></span>](#xml-id)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#xml-id\}
+
+The Legacy XML ID from the source document
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageInput</code>.<code className="gqlmd-entity-name">annotations</code></span>](#annotations)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">JSON!</code></span>](/graphql/03-types/08-scalars/json) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#annotations\}
+
+Annotations as JSON array

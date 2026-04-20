@@ -1,0 +1,51 @@
+---
+id: glossary-term-instance
+title: GlossaryTermInstance
+---
+
+A glossary term instance within a specific work
+
+```graphql
+type GlossaryTermInstance {
+  uuid: ID!
+  authority: String!
+  definition: String
+  names: GlossaryTermNames!
+  termNumber: Int!
+  passages(first: Int, after: String): GlossaryPassagesPage!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermInstance</code>.<code className="gqlmd-entity-name">uuid</code></span>](#uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#uuid\}
+
+Unique identifier
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermInstance</code>.<code className="gqlmd-entity-name">authority</code></span>](#authority)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#authority\}
+
+Authority UUID for the term
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermInstance</code>.<code className="gqlmd-entity-name">definition</code></span>](#definition)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#definition\}
+
+Definition of the term
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermInstance</code>.<code className="gqlmd-entity-name">names</code></span>](#names)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">GlossaryTermNames!</code></span>](/graphql/03-types/06-objects/glossary-term-names) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#names\}
+
+Names in different languages
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermInstance</code>.<code className="gqlmd-entity-name">termNumber</code></span>](#term-number)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#term-number\}
+
+Absolute position of this term in the work's glossary (1-based)
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermInstance</code>.<code className="gqlmd-entity-name">passages</code></span>](#passages)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">GlossaryPassagesPage!</code></span>](/graphql/03-types/06-objects/glossary-passages-page) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#passages\}
+
+Paginated passage references where this term appears
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermInstance.passages</code>.<code className="gqlmd-entity-name">first</code></span>](#glossary-term-instance-passages-first)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge">scalar</mark> \{#glossary-term-instance-passages-first\}
+
+Number of passages to return (default: all)
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryTermInstance.passages</code>.<code className="gqlmd-entity-name">after</code></span>](#glossary-term-instance-passages-after)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#glossary-term-instance-passages-after\}
+
+Cursor from previous page's nextCursor (offset-based)

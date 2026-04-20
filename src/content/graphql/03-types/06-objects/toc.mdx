@@ -1,0 +1,28 @@
+---
+id: toc
+title: Toc
+---
+
+Table of contents for a work, organized by major sections
+
+```graphql
+type Toc {
+  frontMatter: [TocEntry!]!
+  body: [TocEntry!]!
+  backMatter: [TocEntry!]!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Toc</code>.<code className="gqlmd-entity-name">frontMatter</code></span>](#front-matter)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[TocEntry!]!</code></span>](/graphql/03-types/06-objects/toc-entry) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#front-matter\}
+
+Front matter entries (acknowledgment, introduction, summary)
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Toc</code>.<code className="gqlmd-entity-name">body</code></span>](#body)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[TocEntry!]!</code></span>](/graphql/03-types/06-objects/toc-entry) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#body\}
+
+Body entries (homage, translation, colophon, etc.)
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Toc</code>.<code className="gqlmd-entity-name">backMatter</code></span>](#back-matter)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[TocEntry!]!</code></span>](/graphql/03-types/06-objects/toc-entry) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#back-matter\}
+
+Back matter entries (endnotes, abbreviations)

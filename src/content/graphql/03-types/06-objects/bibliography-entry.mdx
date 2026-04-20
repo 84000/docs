@@ -1,0 +1,23 @@
+---
+id: bibliography-entry
+title: BibliographyEntry
+---
+
+A bibliography section with heading and entries
+
+```graphql
+type BibliographyEntry {
+  heading: String
+  entries: [BibliographyEntryItem!]!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">BibliographyEntry</code>.<code className="gqlmd-entity-name">heading</code></span>](#heading)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#heading\}
+
+Section heading
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">BibliographyEntry</code>.<code className="gqlmd-entity-name">entries</code></span>](#entries)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[BibliographyEntryItem!]!</code></span>](/graphql/03-types/06-objects/bibliography-entry-item) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#entries\}
+
+Bibliography entries in this section
