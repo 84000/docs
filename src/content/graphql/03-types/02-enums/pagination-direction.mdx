@@ -1,0 +1,28 @@
+---
+id: pagination-direction
+title: PaginationDirection
+---
+
+Direction for pagination
+
+```graphql
+enum PaginationDirection {
+  FORWARD
+  BACKWARD
+  AROUND
+}
+```
+
+### Values
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PaginationDirection</code>.<code className="gqlmd-entity-name">FORWARD</code></span>](#forward) \{#forward\}
+
+Fetch passages after the cursor (default)
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PaginationDirection</code>.<code className="gqlmd-entity-name">BACKWARD</code></span>](#backward) \{#backward\}
+
+Fetch passages before the cursor
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PaginationDirection</code>.<code className="gqlmd-entity-name">AROUND</code></span>](#around) \{#around\}
+
+Fetch passages around the cursor (both before and after)

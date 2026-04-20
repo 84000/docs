@@ -1,0 +1,28 @@
+---
+id: glossary-passages-page
+title: GlossaryPassagesPage
+---
+
+Paginated passage references for a glossary term
+
+```graphql
+type GlossaryPassagesPage {
+  items: [Passage!]!
+  nextCursor: String
+  hasMore: Boolean!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryPassagesPage</code>.<code className="gqlmd-entity-name">items</code></span>](#items)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[Passage!]!</code></span>](/graphql/03-types/06-objects/passage) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#items\}
+
+Passages in this page
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryPassagesPage</code>.<code className="gqlmd-entity-name">nextCursor</code></span>](#next-cursor)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#next-cursor\}
+
+Cursor for fetching the next page (offset encoded as string), null if no more
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">GlossaryPassagesPage</code>.<code className="gqlmd-entity-name">hasMore</code></span>](#has-more)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean!</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#has-more\}
+
+Whether more passages exist beyond this page

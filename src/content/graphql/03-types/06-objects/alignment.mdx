@@ -1,0 +1,38 @@
+---
+id: alignment
+title: Alignment
+---
+
+An alignment linking a passage to Tibetan source text
+
+```graphql
+type Alignment {
+  folioUuid: ID!
+  toh: String!
+  tibetan: String!
+  folioNumber: Int!
+  volumeNumber: Int!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Alignment</code>.<code className="gqlmd-entity-name">folioUuid</code></span>](#folio-uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#folio-uuid\}
+
+UUID of the folio containing the Tibetan source
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Alignment</code>.<code className="gqlmd-entity-name">toh</code></span>](#toh)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#toh\}
+
+Tohoku catalog reference (e.g., "toh123")
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Alignment</code>.<code className="gqlmd-entity-name">tibetan</code></span>](#tibetan)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#tibetan\}
+
+Tibetan source text content
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Alignment</code>.<code className="gqlmd-entity-name">folioNumber</code></span>](#folio-number)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#folio-number\}
+
+Folio number within the volume
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Alignment</code>.<code className="gqlmd-entity-name">volumeNumber</code></span>](#volume-number)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#volume-number\}
+
+Volume number

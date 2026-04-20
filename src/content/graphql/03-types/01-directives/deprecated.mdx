@@ -1,0 +1,18 @@
+---
+id: deprecated
+title: deprecated
+---
+
+Marks an element of a GraphQL schema as no longer supported.
+
+```graphql
+directive @deprecated(
+  reason: String = "No longer supported"
+) on FIELD_DEFINITION | ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION | ENUM_VALUE
+```
+
+### Arguments
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">deprecated</code>.<code className="gqlmd-entity-name">reason</code></span>](#reason)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#reason\}
+
+Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by [CommonMark](https://commonmark.org/).

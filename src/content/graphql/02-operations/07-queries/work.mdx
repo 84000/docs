@@ -1,0 +1,32 @@
+---
+id: work
+title: work
+---
+
+Get a single work by UUID or Tohoku catalog number.
+When both uuid and toh are provided, toh acts as a composite key
+and will be used as the default for nested resolvers (like imprint).
+
+```graphql
+work(
+  uuid: ID
+  toh: String
+): Work
+```
+
+### Arguments
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">work</code>.<code className="gqlmd-entity-name">uuid</code></span>](#uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge">scalar</mark> \{#uuid\}
+
+Unique identifier for the work
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">work</code>.<code className="gqlmd-entity-name">toh</code></span>](#toh)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#toh\}
+
+Tohoku catalog entry number. Can be combined with uuid to select
+a specific toh for multi-toh works (composite key).
+
+### Type
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-name">Work</code></span>](/graphql/03-types/06-objects/work) <mark className="gqlmd-badge">object</mark>
+
+A published translation work from the 84000 canon

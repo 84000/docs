@@ -1,0 +1,38 @@
+---
+id: folio
+title: Folio
+---
+
+A folio page from a Tibetan work
+
+```graphql
+type Folio {
+  uuid: ID!
+  content: String!
+  volume: Int!
+  folio: Int!
+  side: FolioSide!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Folio</code>.<code className="gqlmd-entity-name">uuid</code></span>](#uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#uuid\}
+
+Unique identifier
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Folio</code>.<code className="gqlmd-entity-name">content</code></span>](#content)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#content\}
+
+Content of the folio
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Folio</code>.<code className="gqlmd-entity-name">volume</code></span>](#volume)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#volume\}
+
+Volume number
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Folio</code>.<code className="gqlmd-entity-name">folio</code></span>](#folio)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#folio\}
+
+Folio number within the volume
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Folio</code>.<code className="gqlmd-entity-name">side</code></span>](#side)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">FolioSide!</code></span>](/graphql/03-types/02-enums/folio-side) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">enum</mark> \{#side\}
+
+Side of the folio (a or b)

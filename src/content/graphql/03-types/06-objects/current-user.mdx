@@ -1,0 +1,28 @@
+---
+id: current-user
+title: CurrentUser
+---
+
+Currently authenticated user
+
+```graphql
+type CurrentUser {
+  id: ID!
+  email: String!
+  role: UserRole!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">CurrentUser</code>.<code className="gqlmd-entity-name">id</code></span>](#id)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#id\}
+
+User's unique identifier
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">CurrentUser</code>.<code className="gqlmd-entity-name">email</code></span>](#email)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#email\}
+
+User's email address
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">CurrentUser</code>.<code className="gqlmd-entity-name">role</code></span>](#role)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">UserRole!</code></span>](/graphql/03-types/02-enums/user-role) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">enum</mark> \{#role\}
+
+User's role

@@ -1,0 +1,28 @@
+---
+id: work-connection
+title: WorkConnection
+---
+
+Connection type for paginated works
+
+```graphql
+type WorkConnection {
+  items: [Work!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">WorkConnection</code>.<code className="gqlmd-entity-name">items</code></span>](#items)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[Work!]!</code></span>](/graphql/03-types/06-objects/work) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#items\}
+
+List of works in this page
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">WorkConnection</code>.<code className="gqlmd-entity-name">pageInfo</code></span>](#page-info)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">PageInfo!</code></span>](/graphql/03-types/06-objects/page-info) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#page-info\}
+
+Pagination information
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">WorkConnection</code>.<code className="gqlmd-entity-name">totalCount</code></span>](#total-count)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#total-count\}
+
+Total count of works matching the query

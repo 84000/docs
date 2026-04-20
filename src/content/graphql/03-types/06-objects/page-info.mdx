@@ -1,0 +1,34 @@
+---
+id: page-info
+title: PageInfo
+---
+
+Pagination information for connections.
+Used consistently across all paginated queries.
+
+```graphql
+type PageInfo {
+  nextCursor: String
+  prevCursor: String
+  hasMoreAfter: Boolean!
+  hasMoreBefore: Boolean!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PageInfo</code>.<code className="gqlmd-entity-name">nextCursor</code></span>](#next-cursor)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#next-cursor\}
+
+Cursor for fetching the next page
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PageInfo</code>.<code className="gqlmd-entity-name">prevCursor</code></span>](#prev-cursor)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#prev-cursor\}
+
+Cursor for fetching the previous page
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PageInfo</code>.<code className="gqlmd-entity-name">hasMoreAfter</code></span>](#has-more-after)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean!</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#has-more-after\}
+
+Whether there are more items after the current page
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PageInfo</code>.<code className="gqlmd-entity-name">hasMoreBefore</code></span>](#has-more-before)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean!</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#has-more-before\}
+
+Whether there are more items before the current page

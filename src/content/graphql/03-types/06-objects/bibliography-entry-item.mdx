@@ -1,0 +1,28 @@
+---
+id: bibliography-entry-item
+title: BibliographyEntryItem
+---
+
+A single bibliography entry item
+
+```graphql
+type BibliographyEntryItem {
+  uuid: ID!
+  html: String!
+  workUuid: ID
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">BibliographyEntryItem</code>.<code className="gqlmd-entity-name">uuid</code></span>](#uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#uuid\}
+
+Unique identifier
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">BibliographyEntryItem</code>.<code className="gqlmd-entity-name">html</code></span>](#html)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#html\}
+
+HTML content of the bibliography entry
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">BibliographyEntryItem</code>.<code className="gqlmd-entity-name">workUuid</code></span>](#work-uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge">scalar</mark> \{#work-uuid\}
+
+UUID of the work this entry belongs to

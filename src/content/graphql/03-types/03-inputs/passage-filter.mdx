@@ -1,0 +1,30 @@
+---
+id: passage-filter
+title: PassageFilter
+---
+
+Filter options for passages
+
+```graphql
+input PassageFilter {
+  type: String
+  types: [String!]
+  label: String
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageFilter</code>.<code className="gqlmd-entity-name">type</code></span>](#type)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#type\}
+
+Filter by passage type (e.g., translation, introduction, colophon).
+Can be a single type or use LIKE pattern with %.
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageFilter</code>.<code className="gqlmd-entity-name">types</code></span>](#types)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[String!]</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">list</mark> <mark className="gqlmd-badge">scalar</mark> \{#types\}
+
+Filter by multiple passage types (OR logic).
+Use this instead of type when filtering by multiple types.
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">PassageFilter</code>.<code className="gqlmd-entity-name">label</code></span>](#label)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#label\}
+
+Filter by label pattern using ILIKE (e.g., "n.5%")

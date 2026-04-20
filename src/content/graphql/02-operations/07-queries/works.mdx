@@ -1,0 +1,34 @@
+---
+id: works
+title: works
+---
+
+Get paginated published translation works
+
+```graphql
+works(
+  cursor: String
+  limit: Int
+  filter: WorkFilter
+): WorkConnection!
+```
+
+### Arguments
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">works</code>.<code className="gqlmd-entity-name">cursor</code></span>](#cursor)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#cursor\}
+
+Cursor for pagination (work UUID to start from)
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">works</code>.<code className="gqlmd-entity-name">limit</code></span>](#limit)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge">scalar</mark> \{#limit\}
+
+Maximum number of works to return (default: 50, max: 200)
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">works</code>.<code className="gqlmd-entity-name">filter</code></span>](#filter)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">WorkFilter</code></span>](/graphql/03-types/03-inputs/work-filter) <mark className="gqlmd-badge">input</mark> \{#filter\}
+
+Filter criteria for works
+
+### Type
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-name">WorkConnection</code></span>](/graphql/03-types/06-objects/work-connection) <mark className="gqlmd-badge">object</mark>
+
+Connection type for paginated works

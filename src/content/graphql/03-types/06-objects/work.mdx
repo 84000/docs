@@ -1,0 +1,165 @@
+---
+id: work
+title: Work
+---
+
+A published translation work from the 84000 canon
+
+```graphql
+type Work {
+  bibliography: [BibliographyEntry!]!
+  folios(toh: String!, page: Int, size: Int): [Folio!]!
+  glossary(withAttestations: Boolean): [GlossaryTermInstance!]! @deprecated
+  glossaryTerms(
+    cursor: String
+    limit: Int
+    direction: PaginationDirection
+    withAttestations: Boolean
+  ): GlossaryTermConnection!
+  titles: [Title!]!
+  uuid: ID!
+  title: String!
+  toh: [String!]!
+  publicationDate: String
+  publicationVersion: String!
+  pages: Int!
+  restriction: Boolean!
+  section: String!
+  imprint: Imprint
+  toc: Toc
+  passages(
+    cursor: String
+    limit: Int
+    filter: PassageFilter
+    direction: PaginationDirection
+  ): PassageConnection!
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">bibliography</code></span>](#bibliography)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[BibliographyEntry!]!</code></span>](/graphql/03-types/06-objects/bibliography-entry) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#bibliography\}
+
+Bibliography entries for this work, grouped by section
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">folios</code></span>](#folios)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[Folio!]!</code></span>](/graphql/03-types/06-objects/folio) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#folios\}
+
+Folios for this work, filtered by toh and paginated
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.folios</code>.<code className="gqlmd-entity-name">toh</code></span>](#work-folios-toh)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#work-folios-toh\}
+
+Tohoku catalog entry (e.g., "toh94")
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.folios</code>.<code className="gqlmd-entity-name">page</code></span>](#work-folios-page)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge">scalar</mark> \{#work-folios-page\}
+
+Page number (0-indexed)
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.folios</code>.<code className="gqlmd-entity-name">size</code></span>](#work-folios-size)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge">scalar</mark> \{#work-folios-size\}
+
+Number of folios per page
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">glossaryTerms</code></span>](#glossary-terms)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">GlossaryTermConnection!</code></span>](/graphql/03-types/06-objects/glossary-term-connection) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#glossary-terms\}
+
+Paginated glossary term instances for this work
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.glossaryTerms</code>.<code className="gqlmd-entity-name">cursor</code></span>](#work-glossary-terms-cursor)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#work-glossary-terms-cursor\}
+
+Cursor for pagination (glossary term authority UUID)
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.glossaryTerms</code>.<code className="gqlmd-entity-name">limit</code></span>](#work-glossary-terms-limit)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge">scalar</mark> \{#work-glossary-terms-limit\}
+
+Maximum number of terms to return (default: 50, max: 200)
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.glossaryTerms</code>.<code className="gqlmd-entity-name">direction</code></span>](#work-glossary-terms-direction)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">PaginationDirection</code></span>](/graphql/03-types/02-enums/pagination-direction) <mark className="gqlmd-badge">enum</mark> \{#work-glossary-terms-direction\}
+
+Direction for pagination (default: FORWARD)
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.glossaryTerms</code>.<code className="gqlmd-entity-name">withAttestations</code></span>](#work-glossary-terms-with-attestations)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge">scalar</mark> \{#work-glossary-terms-with-attestations\}
+
+Include attestation information
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">titles</code></span>](#titles)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[Title!]!</code></span>](/graphql/03-types/06-objects/title) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#titles\}
+
+All titles associated with this work, in various languages and types
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">uuid</code></span>](#uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#uuid\}
+
+Unique identifier for the work
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">title</code></span>](#title)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#title\}
+
+Title of the work
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">toh</code></span>](#toh)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[String!]!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#toh\}
+
+Tohoku catalog entry numbers (e.g., ["toh1", "toh2"])
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">publicationDate</code></span>](#publication-date)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#publication-date\}
+
+Date the work was published
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">publicationVersion</code></span>](#publication-version)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#publication-version\}
+
+Semantic version of the publication (e.g., "1.0.0")
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">pages</code></span>](#pages)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#pages\}
+
+Number of source pages
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">restriction</code></span>](#restriction)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean!</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#restriction\}
+
+Whether access to this work is restricted
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">section</code></span>](#section)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#section\}
+
+Section of the canon this work belongs to
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">imprint</code></span>](#imprint)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Imprint</code></span>](/graphql/03-types/06-objects/imprint) <mark className="gqlmd-badge">object</mark> \{#imprint\}
+
+Publication imprint information.
+If the work query specified a toh argument, that value will be used.
+Otherwise, imprint for the first toh in the work is returned.
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">toc</code></span>](#toc)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Toc</code></span>](/graphql/03-types/06-objects/toc) <mark className="gqlmd-badge">object</mark> \{#toc\}
+
+Table of contents for the work, organized by major sections.
+Returns a recursive tree structure up to 12 levels deep.
+See the TocEntry type documentation for query examples.
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">passages</code></span>](#passages)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">PassageConnection!</code></span>](/graphql/03-types/06-objects/passage-connection) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#passages\}
+
+Paginated passages from this work
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.passages</code>.<code className="gqlmd-entity-name">cursor</code></span>](#work-passages-cursor)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#work-passages-cursor\}
+
+Cursor for pagination (passage UUID to start from)
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.passages</code>.<code className="gqlmd-entity-name">limit</code></span>](#work-passages-limit)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge">scalar</mark> \{#work-passages-limit\}
+
+Maximum number of passages to return (default: 20, max: 100)
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.passages</code>.<code className="gqlmd-entity-name">filter</code></span>](#work-passages-filter)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">PassageFilter</code></span>](/graphql/03-types/03-inputs/passage-filter) <mark className="gqlmd-badge">input</mark> \{#work-passages-filter\}
+
+Filter passages by criteria
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.passages</code>.<code className="gqlmd-entity-name">direction</code></span>](#work-passages-direction)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">PaginationDirection</code></span>](/graphql/03-types/02-enums/pagination-direction) <mark className="gqlmd-badge">enum</mark> \{#work-passages-direction\}
+
+Direction for pagination (default: FORWARD)
+
+<details className="gqlmd-details">
+<summary className="gqlmd-details-summary">deprecated</summary>
+
+</details>
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work</code>.<code className="gqlmd-entity-name">glossary</code></span>](#glossary)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[GlossaryTermInstance!]!</code></span>](/graphql/03-types/06-objects/glossary-term-instance) <mark className="gqlmd-badge gqlmd-badge-deprecated">deprecated</mark> <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#glossary\}
+
+> **DEPRECATED**
+
+Use glossaryTerms for paginated access
+
+Glossary term instances for this work
+
+##### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Work.glossary</code>.<code className="gqlmd-entity-name">withAttestations</code></span>](#work-glossary-with-attestations)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge">scalar</mark> \{#work-glossary-with-attestations\}
+
+Include attestation information
+undefined

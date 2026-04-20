@@ -1,0 +1,24 @@
+---
+id: glossary-instance
+title: glossaryInstance
+---
+
+Get a single glossary instance by UUID
+
+```graphql
+glossaryInstance(
+  uuid: ID!
+): GlossaryTermInstance
+```
+
+### Arguments
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">glossaryInstance</code>.<code className="gqlmd-entity-name">uuid</code></span>](#uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID!</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#uuid\}
+
+The glossary instance UUID
+
+### Type
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-name">GlossaryTermInstance</code></span>](/graphql/03-types/06-objects/glossary-term-instance) <mark className="gqlmd-badge">object</mark>
+
+A glossary term instance within a specific work

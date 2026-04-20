@@ -1,0 +1,78 @@
+---
+id: imprint
+title: Imprint
+---
+
+Publication imprint information for a work
+
+```graphql
+type Imprint {
+  toh: String!
+  section: String
+  version: String
+  restriction: Boolean
+  publishYear: String
+  tibetanAuthors: [String!]
+  isAuthorContested: Boolean!
+  sourceDescription: String
+  publisherStatement: String
+  tibetanTranslators: String
+  license: License!
+  mainTitles: TitlesByLanguage
+  longTitles: TitlesByLanguage
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">toh</code></span>](#toh)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String!</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#toh\}
+
+Tohoku catalog entry number (e.g., "toh1")
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">section</code></span>](#section)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#section\}
+
+Section of the canon (e.g., "Sutra")
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">version</code></span>](#version)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#version\}
+
+Publication version (semantic versioning)
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">restriction</code></span>](#restriction)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge">scalar</mark> \{#restriction\}
+
+Whether access to this work is restricted
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">publishYear</code></span>](#publish-year)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#publish-year\}
+
+Year the translation was published
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">tibetanAuthors</code></span>](#tibetan-authors)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">[String!]</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">list</mark> <mark className="gqlmd-badge">scalar</mark> \{#tibetan-authors\}
+
+Names of Tibetan authors
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">isAuthorContested</code></span>](#is-author-contested)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean!</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#is-author-contested\}
+
+Whether the authorship is contested
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">sourceDescription</code></span>](#source-description)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#source-description\}
+
+Description of the source text
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">publisherStatement</code></span>](#publisher-statement)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#publisher-statement\}
+
+Publisher statement
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">tibetanTranslators</code></span>](#tibetan-translators)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#tibetan-translators\}
+
+Names of Tibetan translators
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">license</code></span>](#license)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">License!</code></span>](/graphql/03-types/06-objects/license) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">object</mark> \{#license\}
+
+License information
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">mainTitles</code></span>](#main-titles)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">TitlesByLanguage</code></span>](/graphql/03-types/06-objects/titles-by-language) <mark className="gqlmd-badge">object</mark> \{#main-titles\}
+
+Main titles by language
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">Imprint</code>.<code className="gqlmd-entity-name">longTitles</code></span>](#long-titles)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">TitlesByLanguage</code></span>](/graphql/03-types/06-objects/titles-by-language) <mark className="gqlmd-badge">object</mark> \{#long-titles\}
+
+Long titles by language

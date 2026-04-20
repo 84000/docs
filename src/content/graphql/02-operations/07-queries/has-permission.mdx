@@ -1,0 +1,23 @@
+---
+id: has-permission
+title: hasPermission
+---
+
+Check if the current user has a specific permission.
+Returns false if not authenticated.
+
+```graphql
+hasPermission(
+  permission: Permission!
+): Boolean!
+```
+
+### Arguments
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">hasPermission</code>.<code className="gqlmd-entity-name">permission</code></span>](#permission)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Permission!</code></span>](/graphql/03-types/02-enums/permission) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">enum</mark> \{#permission\}
+
+### Type
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge">scalar</mark>
+
+The `Boolean` scalar type represents `true` or `false`.

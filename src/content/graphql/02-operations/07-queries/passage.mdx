@@ -1,0 +1,25 @@
+---
+id: passage
+title: passage
+---
+
+Fetch a single passage by UUID or XML ID.
+At least one of uuid or legacy xmlId must be provided. Prefers uuid if both are present.
+
+```graphql
+passage(
+  uuid: ID
+): Passage
+```
+
+### Arguments
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">passage</code>.<code className="gqlmd-entity-name">uuid</code></span>](#uuid)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">ID</code></span>](/graphql/03-types/08-scalars/id) <mark className="gqlmd-badge">scalar</mark> \{#uuid\}
+
+The unique identifier of the passage
+
+### Type
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-name">Passage</code></span>](/graphql/03-types/06-objects/passage) <mark className="gqlmd-badge">object</mark>
+
+A passage of text from a work

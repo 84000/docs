@@ -1,0 +1,33 @@
+---
+id: save-passages-result
+title: SavePassagesResult
+---
+
+Result of saving passages
+
+```graphql
+type SavePassagesResult {
+  success: Boolean!
+  savedCount: Int!
+  deletedCount: Int
+  error: String
+}
+```
+
+### Fields
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">SavePassagesResult</code>.<code className="gqlmd-entity-name">success</code></span>](#success)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Boolean!</code></span>](/graphql/03-types/08-scalars/boolean) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#success\}
+
+Whether the save was successful
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">SavePassagesResult</code>.<code className="gqlmd-entity-name">savedCount</code></span>](#saved-count)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int!</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge gqlmd-badge-non_null">non-null</mark> <mark className="gqlmd-badge">scalar</mark> \{#saved-count\}
+
+Number of passages saved
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">SavePassagesResult</code>.<code className="gqlmd-entity-name">deletedCount</code></span>](#deleted-count)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">Int</code></span>](/graphql/03-types/08-scalars/int) <mark className="gqlmd-badge">scalar</mark> \{#deleted-count\}
+
+Number of passages deleted
+
+#### [<span className="gqlmd-entity"><code className="gqlmd-entity-parent">SavePassagesResult</code>.<code className="gqlmd-entity-name">error</code></span>](#error)<span className="gqlmd-bullet">&nbsp;\*&nbsp;</span>[<span className="gqlmd-entity"><code className="gqlmd-entity-name">String</code></span>](/graphql/03-types/08-scalars/string) <mark className="gqlmd-badge">scalar</mark> \{#error\}
+
+Error message if the save failed
